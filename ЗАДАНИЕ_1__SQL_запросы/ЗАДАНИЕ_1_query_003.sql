@@ -10,16 +10,18 @@
 -- N.B.: IN ORACLE, "AS" IS ILLEGAL FOR MAKING TABLE ALIASES
 
 SELECT
-	t2.Department_Name,
-	t2.Department_Count
+	t1.Department_Name  AS "Филиал",
+	t1.Department_Count AS "Число сотрудников"
 FROM
-	PERSONS
+	DEPARTMENTS
 	t1
 RIGHT JOIN
     (
         SELECT
             Department_ID,
-            count(Last_Name) AS Department_Count,
+            count(*) AS Department_Count,
+        FROM
+            PERSONS
         GROUP BY
             Department_ID
     )

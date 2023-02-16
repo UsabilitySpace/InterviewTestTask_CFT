@@ -9,22 +9,21 @@
 
 -- N.B.: IN ORACLE, "AS" IS ILLEGAL FOR MAKING TABLE ALIASES
 
-
 SELECT
-	t2.Department_Name,
-	t2.Department_Count
+	t1.Department_Name  AS "Филиал"
 FROM
-	PERSONS
+	DEPARTMENTS
 	t1
 RIGHT JOIN
     (
         SELECT
-            Department_ID,
-            count(Last_Name) AS Department_Count,
+            Department_ID
+        FROM
+            PERSONS
         GROUP BY
             Department_ID
-        WHERE
-            Department_Count > 20
+        HAVING
+            count(*) > 20
     )
     t2
 ON

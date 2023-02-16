@@ -10,8 +10,8 @@
 -- N.B.: IN ORACLE, "AS" IS ILLEGAL FOR MAKING TABLE ALIASES
 
 SELECT
-	t1.Last_Name,
-	t2.Department_Name
+	t1.Last_Name       AS "Фамилия",
+	t2.Department_Name AS "Филиал"
 FROM
 	PERSONS
     t1

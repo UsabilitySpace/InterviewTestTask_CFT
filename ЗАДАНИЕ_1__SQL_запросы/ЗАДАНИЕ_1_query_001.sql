@@ -17,7 +17,7 @@
 -- --------------
 
 SELECT
-	Last_Name
+	Last_Name AS "Фамилия"
 FROM
 	PERSONS
 WHERE
@@ -36,7 +36,7 @@ WHERE
 -- --------------
 
 SELECT
-	Last_Name
+	Last_Name AS "Фамилия"
 FROM
 	PERSONS
 WHERE
