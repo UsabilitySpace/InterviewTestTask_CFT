@@ -11,7 +11,7 @@
 
 SELECT
 	t1.Department_Name  AS "Филиал",
-	t1.Department_Count AS "Число сотрудников"
+	t2.Department_Count AS "Число сотрудников"
 FROM
 	DEPARTMENTS
 	t1
